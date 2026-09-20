@@ -42,7 +42,7 @@ export function AdminDashboard() {
   };
 
   const fetchSchemes = async () => {
-    const { data } = await supabase.from('schemes').select('*').order('created_at', { ascending: false });
+    const { data } = await supabase.from('schemes').select('*').order('scheme_id', { ascending: false });
     if (data) setSchemes(data);
   };
 
