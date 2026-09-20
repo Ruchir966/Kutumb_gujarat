@@ -356,9 +356,14 @@ export function CitizenDashboard() {
       <div className="mb-12">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-2xl font-bold text-slate-900">Family Overview</h2>
-          <Button variant="outline" size="sm" className="gap-2 border-slate-300 text-slate-700" onClick={() => setIsManageOpen(true)}>
-            <Settings className="w-4 h-4" /> Manage Family
-          </Button>
+          <div className="flex gap-3">
+            <Button size="sm" className="gap-2 bg-blue-600 hover:bg-blue-700 text-white shadow-sm" onClick={() => setIsAddMemberOpen(true)}>
+              <Plus className="w-4 h-4" /> Add Member
+            </Button>
+            <Button variant="outline" size="sm" className="gap-2 border-slate-300 text-slate-700 bg-white shadow-sm" onClick={() => setIsManageOpen(true)}>
+              <Settings className="w-4 h-4" /> Manage Family
+            </Button>
+          </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {familyMembers.map((member, i) => (
