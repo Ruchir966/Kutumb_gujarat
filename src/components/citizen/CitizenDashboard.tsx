@@ -97,7 +97,7 @@ export function CitizenDashboard() {
       }
 
       try {
-        const res = await fetch(`http://localhost:3001/api/eligibility/evaluate/${fid}`);
+        const res = await fetch(`/api/eligibility/evaluate/${fid}`);
         const result = await res.json();
         if (result.success && result.eligible_schemes) {
            const mappedSchemes = result.eligible_schemes.map((s: any, index: number) => ({
